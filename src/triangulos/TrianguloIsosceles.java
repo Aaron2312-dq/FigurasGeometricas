@@ -1,0 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package triangulos;
+
+/**
+ *
+ * @author Student
+ */
+public class TrianguloIsosceles extends Triangulo {
+    public TrianguloIsosceles(double ladoA, double ladoB, double ladoC){
+        super(ladoA,ladoB,ladoC);
+    }
+     @Override
+    protected double calcularArea() {
+        return lado_C *(Math.sqrt(4 * Math.pow(lado_A, 2) - Math.pow(lado_C, 2))/4);
+    }
+    @Override
+    public String toString() {
+        return "\nLado_A" + lado_A + "\nLado_B" + lado_B + "\nLado_C" + lado_C +
+                "Perimetro: "+ getPerimetro() + "Area: " + getArea();
+    }
+}
